@@ -1,0 +1,12 @@
+{
+	"aliases": [
+		"default",
+		"es5",
+		"modernizr:es5array"
+	],
+	"browsers": {
+		"ie": "6 - 8"
+	},
+	"spec": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.every",
+	"docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"
+}

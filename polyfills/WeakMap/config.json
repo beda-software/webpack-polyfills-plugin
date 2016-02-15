@@ -1,0 +1,20 @@
+{
+	"aliases": [
+		"es6"
+	],
+	"browsers": {
+		"ie": "7 - 11",
+		"safari": "*",
+		"chrome": "<38",
+		"firefox": "<36",
+		"ios_saf": "*",
+		"opera": "<25"
+	},
+	"dependencies": [
+		"Object.defineProperty",
+		"Array.prototype.forEach",
+		"Date.now"
+	],
+	"license": "https://github.com/webcomponents/webcomponentsjs/blob/master/LICENSE.md",
+	"docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap"
+}

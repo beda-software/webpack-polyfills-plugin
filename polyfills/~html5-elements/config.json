@@ -1,0 +1,12 @@
+{
+	"browsers": {
+		"ie": "6 - 9",
+		"safari": "4"
+	},
+	"aliases": [
+		"default",
+		"html5shiv"
+	],
+	"license": "MIT",
+	"repo": "https://github.com/aFarkas/html5shiv"
+}

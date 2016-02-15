@@ -1,0 +1,14 @@
+{
+	"aliases": [
+		"default",
+		"caniuse:json",
+		"modernizr:json"
+	],
+	"browsers": {
+		"ie": "6 - 7"
+	},
+	"license": "MIT",
+	"repo": "https://github.com/abozhilov/json",
+	"docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+	"spec": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-json-object"
+}
