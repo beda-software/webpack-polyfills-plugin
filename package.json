@@ -1,78 +1,19 @@
 {
-  "_args": [
-    [
-      "webpack-polyfills-plugin@0.0.7",
-      "/app"
-    ]
-  ],
-  "_from": "webpack-polyfills-plugin@0.0.7",
-  "_id": "webpack-polyfills-plugin@0.0.7",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/webpack-polyfills-plugin",
-  "_nodeVersion": "0.12.5",
-  "_npmUser": {
-    "email": "mail@andreykogut.com",
-    "name": "sl1v3r"
-  },
-  "_npmVersion": "2.11.2",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "webpack-polyfills-plugin",
-    "raw": "webpack-polyfills-plugin@0.0.7",
-    "rawSpec": "0.0.7",
-    "scope": null,
-    "spec": "0.0.7",
-    "type": "version"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/webpack-polyfills-plugin/-/webpack-polyfills-plugin-0.0.7.tgz",
-  "_shasum": "e8e44bab51c06237c0fb105c5ca45060e6785fc0",
-  "_shrinkwrap": null,
-  "_spec": "webpack-polyfills-plugin@0.0.7",
-  "_where": "/app",
-  "author": {
-    "name": "Andrey Kogut"
-  },
-  "bugs": {
-    "url": "https://github.com/Sl1v3r/webpack-polyfills-plugin/issues"
-  },
-  "dependencies": {
-    "webpack-core": "^0.6.6"
-  },
-  "description": "Adds polyfills to bundle file, without magic.",
-  "devDependencies": {
-    "ncp": "^2.0.0"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "e8e44bab51c06237c0fb105c5ca45060e6785fc0",
-    "tarball": "http://registry.npmjs.org/webpack-polyfills-plugin/-/webpack-polyfills-plugin-0.0.7.tgz"
-  },
-  "gitHead": "544f150de7eda9f738f60a30615a4953859bfbde",
-  "homepage": "https://github.com/Sl1v3r/webpack-polyfills-plugin",
-  "keywords": [
-    "webpack"
-  ],
-  "license": "ISC",
-  "main": "index.js",
-  "maintainers": [
-    {
-      "name": "sl1v3r",
-      "email": "mail@andreykogut.com"
-    }
-  ],
   "name": "webpack-polyfills-plugin",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
+  "version": "0.0.8",
+  "description": "Adds polyfills from [polyfill-service](https://github.com/Financial-Times/polyfill-service) to bundle file. Without magic.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sl1v3r/webpack-polyfills-plugin.git"
+    "url": "git+https://github.com/Brogency/webpack-polyfills-plugin.git"
   },
-  "scripts": {
-    "copy": "ncp ./polyfill-service/polyfills ./polyfills"
+  "author": "sl1v3r mail@andreykogut.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brogency/webpack-polyfills-plugin/issues"
   },
-  "version": "0.0.7"
+  "homepage": "https://github.com/Brogency/webpack-polyfills-plugin#readme"
 }
