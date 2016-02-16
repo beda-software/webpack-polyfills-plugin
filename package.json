@@ -1,19 +1,28 @@
 {
   "name": "webpack-polyfills-plugin",
-  "version": "0.0.8",
-  "description": "Adds polyfills from [polyfill-service](https://github.com/Financial-Times/polyfill-service) to bundle file. Without magic.",
+  "version": "0.0.9",
+  "description": "Adds polyfills to bundle file, without magic.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "copy": "ncp ./polyfill-service/polyfills ./polyfills"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Brogency/webpack-polyfills-plugin.git"
+    "url": "https://github.com/Brogency/webpack-polyfills-plugin"
   },
-  "author": "sl1v3r mail@andreykogut.com",
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Andrey Kogut",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Brogency/webpack-polyfills-plugin/issues"
   },
-  "homepage": "https://github.com/Brogency/webpack-polyfills-plugin#readme"
+  "homepage": "https://github.com/Brogency/webpack-polyfills-plugin",
+  "dependencies": {
+    "webpack-core": "^0.6.6"
+  },
+  "devDependencies": {
+    "ncp": "^2.0.0"
+  }
 }
