@@ -2,6 +2,7 @@
 
 Adds polyfills from [polyfill-service](https://github.com/Financial-Times/polyfill-service) to bundle file. Without magic.
 
+(It is fork from Sl1v3r/webpack-polyfills-plugin)
 
 ## Usage:
 
