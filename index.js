@@ -23,6 +23,9 @@ PolyfillsPlugin.prototype.apply = function(compiler) {
             chunks.forEach(function(chunk) {
                 if(!chunk.initial) return;
                 chunk.files.forEach(function(file, i) {
+                    if (!file.endsWith('.js')) {
+                        return;
+                    }
                     compilation.assets[file] = new ConcatSource("/* Polyfills */\n", filesContent, compilation.assets[file]);
                 });
             });
