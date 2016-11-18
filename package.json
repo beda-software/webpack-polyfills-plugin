@@ -1,5 +1,5 @@
 {
-  "name": "webpack-polyfills-plugin",
+  "name": "polyfills-webpack-plugin",
   "version": "0.1.0",
   "description": "Adds polyfills to bundle file, without magic.",
   "main": "index.js",
