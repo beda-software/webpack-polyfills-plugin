@@ -11,6 +11,7 @@ module.exports = PolyfillsPlugin;
 PolyfillsPlugin.prototype.apply = function(compiler) {
 
     var filesContent = "";
+    var that = this;
 
     this.polyfills.forEach(function(polyfill) {
         var filePath = require.resolve("./polyfills/" + polyfill + "/polyfill");
@@ -24,7 +25,7 @@ PolyfillsPlugin.prototype.apply = function(compiler) {
             chunks.forEach(function(chunk) {
                 if(!chunk.initial) return;
                 chunk.files.forEach(function(file, i) {
-                  if(this.exclude == undefined || !file.match(this.exclude)){
+                  if(that.exclude == undefined || !file.match(that.exclude)){
                     compilation.assets[file] = new ConcatSource("/* Polyfills */\n", filesContent, compilation.assets[file]);
                   }
                 });
