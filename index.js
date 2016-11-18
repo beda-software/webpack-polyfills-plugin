@@ -1,8 +1,9 @@
 var ConcatSource = require("webpack-core/lib/ConcatSource");
 var fs = require("fs");
 
-function PolyfillsPlugin(polyfills) {
+function PolyfillsPlugin(polyfills, exclude) {
     this.polyfills = polyfills || [];
+    this.exclude = exclude;
 }
 
 module.exports = PolyfillsPlugin;
@@ -23,7 +24,9 @@ PolyfillsPlugin.prototype.apply = function(compiler) {
             chunks.forEach(function(chunk) {
                 if(!chunk.initial) return;
                 chunk.files.forEach(function(file, i) {
+                  if(this.exclude == undefined || !file.match(this.exclude)){
                     compilation.assets[file] = new ConcatSource("/* Polyfills */\n", filesContent, compilation.assets[file]);
+                  }
                 });
             });
             callback();
