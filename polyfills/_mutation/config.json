@@ -7,13 +7,15 @@
 		"ios_chr": "*",
 		"ios_saf": "*",
 		"ie": "*",
+		"ie_mob": "10 - *",
 		"opera": "*",
 		"op_mini": "*",
-		"safari": "*"
+		"safari": "*",
+		"firefox_mob": "*",
+		"samsung_mob": "*"
 	},
 	"dependencies": [
 		"Document",
-		"Element",
-		"Text"
+		"Element"
 	]
 }

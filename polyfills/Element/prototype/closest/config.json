@@ -1,19 +1,25 @@
 {
 	"aliases": [
-		"default"
+		"default-3.3",
+		"default-3.4",
+		"default-3.5",
+		"default-3.6",
+		"default",
+		"blissfuljs"
 	],
 	"browsers": {
 		"bb": "*",
-		"android": "*",
-		"chrome": "*",
+		"android": "<5",
+		"chrome": "* - 41",
 		"ie": "*",
 		"ie_mob": "*",
-		"ios_saf": "*",
-		"firefox": "6 - *",
-		"opera": "*",
+		"ios_saf": "<9",
+		"firefox": "6 - 34",
+		"opera": "<28",
 		"op_mini": "*",
-		"op_mob": "*",
-		"safari": "*"
+		"op_mob": "<33",
+		"safari": "<9",
+		"firefox_mob": "6 - 43"
 	},
 	"dependencies": [
 		"Element.prototype.matches"

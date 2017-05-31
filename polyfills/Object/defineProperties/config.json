@@ -2,12 +2,17 @@
 	"aliases": [
 		"es5",
 		"modernizr:es5object",
+		"default-3.3",
+		"default-3.4",
+		"default-3.5",
+		"default-3.6",
 		"default"
 	],
 	"browsers": {
 		"ie": "6 - 8",
 		"safari": "4 - 4.1",
-		"firefox": "<4"
+		"firefox": "<4",
+		"firefox_mob": "<4"
 	},
 	"dependencies": [
 		"Object.defineProperty"

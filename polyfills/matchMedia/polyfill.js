@@ -51,7 +51,7 @@
 	};
 
 	MediaQueryList.prototype.removeListener = function removeListener(listener) {
-		this.addListener.listeners.splice(this.addListener.listeners.indexof(listener), 1);
+		this.addListener.listeners.splice(this.addListener.listeners.indexOf(listener), 1);
 	};
 
 	// <Global>.matchMedia
@@ -80,4 +80,4 @@
 
 		return list;
 	};
-})(this);
+}(this));

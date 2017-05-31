@@ -1,15 +1,20 @@
 {
 	"aliases": [
+		"default-3.3",
+		"default-3.4",
+		"default-3.5",
+		"default-3.6",
 		"default",
-		"modernizr:classlist"
+		"modernizr:classlist",
+		"blissfuljs"
 	],
 	"browsers": {
-		"ie": "6 - 9",
+		"ie": "8 - 9",
 		"safari": "4 - 4.1"
 	},
 	"dependencies": [
 		"Object.defineProperty",
-		"DOMTokenList",
+		"_DOMTokenList",
 		"Element"
 	],
 	"spec": "https://html.spec.whatwg.org/multipage/dom.html#dom-classlist",

@@ -1,13 +1,17 @@
 Object.defineProperty(Element.prototype, 'placeholder', {
+	get: function() {
+		return this.getAttribute('placeholder');
+	},
+
 	set: function (value) {
-		if (!value || !/^(input|textarea)$/i.test(this.nodeName) || !/^(email|number|password|search|tel|text|url|)$/i.test(this.getAttribute('type'))) {
+		if (!value || !/^(input|textarea)$/i.test(this.nodeName) || (/^(input)$/i.test(this.nodeName) && !/^(email|number|password|search|tel|text|url|)$/i.test(this.getAttribute('type')))) {
 			return;
 		}
 
 		var
 		element = this,
-		xInput = document.createElement('-ms-input'),
-		xPlaceholder = xInput.appendChild(document.createElement('-ms-placeholder')),
+		xInput = document.createElement('ms-input'),
+		xPlaceholder = xInput.appendChild(document.createElement('ms-placeholder')),
 		xInputRuntimeStyle = xInput.runtimeStyle,
 		xPlaceholderRuntimeStyle = xPlaceholder.runtimeStyle,
 		elementCurrentStyle = element.currentStyle;
@@ -24,6 +28,7 @@ Object.defineProperty(Element.prototype, 'placeholder', {
 		xPlaceholderRuntimeStyle.backgroundColor = 'transparent';
 		xPlaceholderRuntimeStyle.fontFamily = elementCurrentStyle.fontFamily;
 		xPlaceholderRuntimeStyle.fontSize = elementCurrentStyle.fontSize;
+		xPlaceholderRuntimeStyle.fontWeight = elementCurrentStyle.fontWeight;
 		xPlaceholderRuntimeStyle.margin = '2px 0 0 2px';
 		xPlaceholderRuntimeStyle.padding = elementCurrentStyle.padding;
 		xPlaceholderRuntimeStyle.position = 'absolute';

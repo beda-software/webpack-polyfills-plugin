@@ -1,3 +1,8 @@
+/* eslint-env mocha, browser*/
+/* global proclaim, it */
+
+// Note: Function length is incorrectly reported as 0 in MS Edge (IE12), but this is intentionally not tested
+
 describe('on an element', function () {
 	var
 	documentElement = document.documentElement,
@@ -7,33 +12,30 @@ describe('on an element', function () {
 	it('is a function', function () {
 
 		// Asserting using to.be.a('function') in this case causes a hard browser crash in IE6
-		expect(typeof documentElement.contains).to.be('function');
-	});
-
-	it('expects one argument', function () {
-		expect(documentElement.contains.length).to.be(1);
+		proclaim.isInstanceOf(documentElement.contains, Function);
 	});
 
 	it('functions correctly', function () {
-		expect(documentElement.contains(documentElement)).to.be(true);
-		expect(documentElement.contains(documentHead)).to.be(true);
+		proclaim.equal(documentElement.contains(documentElement), true);
+		proclaim.equal(documentElement.contains(documentHead), true);
 
-		expect(documentHead.contains(documentElement)).to.be(false);
-		expect(documentHead.contains(null)).to.be(false);
+		proclaim.equal(documentHead.contains(documentElement), false);
+		proclaim.equal(documentHead.contains(null), false);
 	});
 
 	it('functions correctly (on detached elements)', function () {
-		expect(detached.contains(detached)).to.be(true);
+		proclaim.equal(detached.contains(detached), true);
 
-		expect(documentElement.contains(detached)).to.be(false);
-		expect(detached.contains(documentElement)).to.be(false);
-		expect(documentHead.contains(null)).to.be(false);
+		proclaim.equal(documentElement.contains(detached), false);
+		proclaim.equal(detached.contains(documentElement), false);
+		proclaim.equal(documentHead.contains(null), false);
 	});
 
-	it('throws when missing the argument', function () {
-		expect(function () {
+	// Native implementations on Safari (desktop and iOS) as of v9 return false when no argument is supplied
+	it.skip('throws when missing the argument', function () {
+		proclaim.throws(function () {
 			documentElement.contains();
-		}).to.throwException();
+		});
 	});
 });
 
@@ -44,25 +46,22 @@ describe('on the document', function () {
 	detached = document.createElement('div');
 
 	it('is a function', function () {
-		expect(document.contains).to.be.a('function');
-	});
-
-	it('expects one argument', function () {
-		expect(document.contains.length).to.be(1);
+		proclaim.isInstanceOf(document.contains, Function);
 	});
 
 	it('functions correctly', function () {
-		expect(document.contains(document)).to.be(true);
-		expect(document.contains(documentElement)).to.be(true);
-		expect(document.contains(documentHead)).to.be(true);
+		proclaim.equal(document.contains(document), true);
+		proclaim.equal(document.contains(documentElement), true);
+		proclaim.equal(document.contains(documentHead), true);
 
-		expect(document.contains(detached)).to.be(false);
-		expect(documentElement.contains(document)).to.be(false);
+		proclaim.equal(document.contains(detached), false);
+		proclaim.equal(documentElement.contains(document), false);
 	});
 
-	it('throws when missing the argument', function () {
-		expect(function () {
+	// Native implementations on Safari (desktop and iOS) as of v9 return false when no argument is supplied
+	it.skip('throws when missing the argument', function () {
+		proclaim.throws(function () {
 			document.contains();
-		}).to.throwException();
+		});
 	});
 });

@@ -11,16 +11,12 @@
 		"ios_saf": "*",
 		"opera": "10 - 20",
 		"op_mob": "*",
-		"op_mini": "*"
-	},
-	"variants": {
-		"plus": {
-			"browsers": {
-				"ie": "*",
-				"safari": "*"
-			}
-		}
+		"op_mini": "*",
+		"firefox_mob": "1 - 24",
+		"ie": "*",
+		"ie_mob": "10 - *",
+		"safari": "*"
 	},
 	"docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign",
-	"spec": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign"
+	"spec": "https://tc39.github.io/ecma262/#sec-math.sign"
 }
