@@ -1,6 +1,6 @@
 {
   "name": "webpack-polyfills-plugin",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Adds polyfills to bundle file, without magic.",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,10 @@
     "url": "https://github.com/Brogency/webpack-polyfills-plugin"
   },
   "keywords": [
-    "webpack"
+    "webpack",
+    "plugin"
   ],
-  "author": "Andrey Kogut",
+  "author": "Andrey Kogut, Owen Ayres",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Brogency/webpack-polyfills-plugin/issues"

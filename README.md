@@ -4,7 +4,7 @@
 
 Adds polyfills from [polyfill-service](https://github.com/Financial-Times/polyfill-service) to bundle file. Without magic.
 
-(It is fork from Sl1v3r/webpack-polyfills-plugin)
+Now the **maintained** plugin, forked from https://github.com/beda-software/webpack-polyfills-plugin/ and ownership transferred.
 
 ## Usage:
 
@@ -18,7 +18,8 @@ module.exports = {
    plugins: [
       new PolyfillsPlugin([
          'Array/prototype/find',
-         'fetch'
+         'fetch',
+         'Object/assign'
       ])
    ]
 }
