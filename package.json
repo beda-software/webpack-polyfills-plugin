@@ -1,4 +1,5 @@
 {
+
   "name": "webpack-polyfills-plugin",
   "version": "0.2.0",
   "description": "Adds polyfills to bundle file, without magic.",
@@ -8,6 +9,7 @@
   },
   "repository": {
     "type": "git",
+
     "url": "https://github.com/oayres/webpack-polyfills-plugin"
   },
   "keywords": [
