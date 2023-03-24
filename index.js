@@ -23,7 +23,12 @@ PolyfillsPlugin.prototype.apply = function(compiler) {
     compiler.plugin("compilation", function(compilation) {
         compilation.plugin("optimize-chunk-assets", function(chunks, callback) {
             chunks.forEach(function(chunk) {
-                if(!chunk.initial) return;
+                if(chunk.hasOwnProperty('initial')) {
+                    if (!chunk.initial) return;
+                } else {
+                    if (!chunk.isInitial()) return;
+                }
+
                 chunk.files.forEach(function(file, i) {
                   if(that.exclude == undefined || !file.match(that.exclude)){
                     compilation.assets[file] = new ConcatSource("/* Polyfills */\n", filesContent, compilation.assets[file]);

@@ -1,6 +1,7 @@
 {
-  "name": "polyfills-webpack-plugin",
-  "version": "0.1.3",
+
+  "name": "webpack-polyfills-plugin",
+  "version": "0.2.0",
   "description": "Adds polyfills to bundle file, without magic.",
   "main": "index.js",
   "scripts": {
@@ -8,17 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bangwu/webpack-polyfills-plugin.git"
+
+    "url": "https://github.com/oayres/webpack-polyfills-plugin"
   },
   "keywords": [
-    "webpack"
+    "webpack",
+    "plugin"
   ],
-  "author": "Andrey Kogut",
+  "author": "Andrey Kogut, Owen Ayres",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bangwu/webpack-polyfills-plugin.git/issues"
+    "url": "https://github.com/oayres/webpack-polyfills-plugin/issues"
   },
-  "homepage": "https://github.com/bangwu/webpack-polyfills-plugin.git",
+  "homepage": "https://github.com/oayres/webpack-polyfills-plugin",
   "dependencies": {
     "webpack-core": "^0.6.6"
   },
